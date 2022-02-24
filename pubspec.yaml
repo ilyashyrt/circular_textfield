@@ -1,6 +1,6 @@
 name: circular_textfield
 description: A circular textfield widget for your apps. This widget makes our TextField come as circular by default. We can also add the icon we want with the icon parameter.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/ilyashyrt/
 repository: https://github.com/ilyashyrt/circular_textfield/
 documentation: https://github.com/ilyashyrt/circular_textfield/

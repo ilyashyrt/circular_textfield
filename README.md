@@ -1,41 +1,25 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
 [![Developer Challenge](https://img.shields.io/badge/developer-challenge-informational?logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjQuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRTZFNkU2O30KPC9zdHlsZT4KPGc+Cgk8ZyBpZD0iTGF5ZXJfMl8xXyI+CgkJPGcgaWQ9IkxheWVyXzEtMl8yXyI+CgkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00LjIsOC40aDEuOWMwLjIsMCwwLjMsMC4xLDAuMywwLjNjMCwwLjEsMCwwLjItMC4xLDAuMmwtMi45LDIuOWMtMC4xLDAuMS0wLjEsMC4zLDAsMC41bDIuOSwyLjkKCQkJCWMwLjEsMC4xLDAuMSwwLjMsMCwwLjVjLTAuMSwwLjEtMC4xLDAuMS0wLjIsMC4xSDQuMmMtMC4xLDAtMC4zLTAuMS0wLjQtMC4ybC0zLjEtMy4xYy0wLjItMC4yLTAuMi0wLjYsMC0wLjhsMy4xLTMuMQoJCQkJQzQsOC40LDQuMSw4LjQsNC4yLDguNHoiLz4KCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE5LjgsMTUuNmgtMS45Yy0wLjIsMC0wLjMtMC4xLTAuMy0wLjNjMC0wLjEsMC0wLjIsMC4xLTAuMmwyLjktMi45YzAuMS0wLjEsMC4xLTAuMywwLTAuNWwtMi45LTIuOQoJCQkJYy0wLjEtMC4xLTAuMS0wLjMsMC0wLjVjMC4xLTAuMSwwLjEtMC4xLDAuMi0wLjFoMS45YzAuMSwwLDAuMywwLjEsMC40LDAuMmwzLjEsMy4xYzAuMiwwLjIsMC4yLDAuNiwwLDAuOGwtMy4xLDMuMQoJCQkJQzIwLDE1LjYsMTkuOSwxNS42LDE5LjgsMTUuNnoiLz4KCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTkuOSwxNC45YzAtMC4xLTAuMS0wLjEtMC4xLTAuMWMwLDAsMCwwLTAuMSwwYy0xLDEuOC0yLjksMi44LTQuOSwyLjhINC4zYy0wLjIsMC0wLjMsMC4xLTAuMywwLjN2Mi4zCgkJCQljMCwwLjIsMC4xLDAuMywwLjMsMC4zaDAuNGMyLjUsMCw0LjktMS4xLDYuNS0yLjljMCwwLDAtMC4xLDAtMC4xQzEwLjYsMTYuOCwxMC4yLDE1LjksOS45LDE0Ljl6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05LjksOWMwLjMtMSwwLjgtMS45LDEuNC0yLjdjMCwwLDAtMC4xLDAtMC4xYy0xLjYtMS45LTQtMi45LTYuNS0yLjlINC41QzQuMiwzLjIsNCwzLjUsNCwzLjhsMCwwdjIuMQoJCQkJYzAsMC4yLDAuMSwwLjMsMC4zLDAuM2wwLDBoMC40YzIsMCwzLjksMS4xLDQuOSwyLjhDOS43LDkuMSw5LjgsOS4xLDkuOSw5QzkuOCw5LjEsOS44LDkuMSw5LjksOXoiLz4KCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE5LjMsNi4yaDAuM2MwLjIsMCwwLjMtMC4xLDAuMy0wLjNWMy44YzAtMC4zLTAuMi0wLjUtMC41LTAuNWgtMC4xYy00LjgsMC04LjgsMy45LTguOSw4LjcKCQkJCWMwLDQuOCwzLjksOC44LDguNyw4LjhjMCwwLDAsMCwwLjEsMGgwLjJjMC4zLDAsMC41LTAuMiwwLjUtMC41djB2LTIuMWMwLTAuMi0wLjEtMC4zLTAuMy0wLjNsMCwwaC0wLjRjLTMuMiwwLTUuOC0yLjYtNS44LTUuOAoJCQkJYzAsMCwwLTAuMSwwLTAuMUMxMy41LDguNywxNi4yLDYuMiwxOS4zLDYuMnoiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==)](https://pub.dev/packages?q=developerchallenge)
+# circular_textfield
+ ---
+A circular textfield widget for your apps. This widget makes our TextField come as circular by default. We can also add the icon we want with the icon parameter.
 
+### Usage
+---
+First, add the circular_textfield package to your pubspec dependencies.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
+To import CircularTextField:
 ```dart
-const like = 'sample';
+import 'package:circular_textfield/circular_textfield.dart';
 ```
+To use CircularTextField:
+```dart
+return Scaffold(
+      body: Center(
+        child: CircularTextField(
+          icon: Icons.access_time,
+          width: 250,
+          hasIcon: true,
+        ),
+      ),
+    );
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
