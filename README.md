@@ -3,6 +3,9 @@
  ---
 A circular textfield widget for your apps. This widget makes our TextField come as circular by default. We can also add the icon we want with the icon parameter.
 
+![screenshot](https://user-images.githubusercontent.com/61869567/160478487-44c460a4-0777-4987-89ec-62b4ba1d2842.png)
+
+
 ### Usage
 ---
 First, add the circular_textfield package to your pubspec dependencies.
